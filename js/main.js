@@ -1,4 +1,3 @@
-
 /* =====================================================
    main.js — John Kamau Mwangi Portfolio
    Place at: js/main.js
