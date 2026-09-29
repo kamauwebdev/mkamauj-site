@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,27 +10,27 @@
 <meta property="og:description" content="Web Developer and IT Systems Specialist based in Nairobi, Kenya.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-
+ 
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23111111'/%3E%3Ccircle cx='22' cy='8' r='4' fill='%232563eb'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='13' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EJK%3C/text%3E%3C/svg%3E">
-
+ 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+ 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<!-- Styles CSS -->
+ 
+<!-- Styles -->
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
+ 
 <!-- SCROLL PROGRESS BAR -->
 <div id="progress-bar"></div>
-
-<!-- MOBILE MENU -->
+ 
+<!-- ─── MOBILE MENU ───────────────────────────── -->
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-close" onclick="closeMobileMenu()">✕</button>
   <a href="#home"     onclick="closeMobileMenu()">Home</a>
@@ -39,18 +39,16 @@
   <a href="#projects" onclick="closeMobileMenu()">Projects</a>
   <a href="#journey"  onclick="closeMobileMenu()">Journey</a>
   <a href="#contact"  onclick="closeMobileMenu()">Contact</a>
-</div>
-
-<!-- Theme toggle inside mobile menu -->
-  <button class="theme-toggle-mob" id="themeToggleMob" onclick="toggleTheme()" title="Toggle theme">
+  <!-- Theme toggle — correctly inside the mobile menu div -->
+  <button class="theme-toggle-mob" id="themeToggleMob" onclick="toggleTheme()">
     <i class="fas fa-moon" id="themeIconMob"></i>
     <span id="themeTextMob">Dark Mode</span>
   </button>
 </div>
-
-<!-- NAVIGATION -->
+ 
+<!-- ─── NAVIGATION ────────────────────────────── -->
 <nav id="navbar">
-  <a href="#home" class="nav-logo">John</a>
+  <a href="#home" class="nav-logo"><i class="fas fa-code"></i> John <span>K.</span></a>
   <ul class="nav-links">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
@@ -59,147 +57,123 @@
     <li><a href="#journey">Journey</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+  <!-- nav-right wraps all right-side items correctly -->
   <div class="nav-right">
-    <!-- Theme Toggle Button -->
     <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle dark/light mode">
       <i class="fas fa-moon" id="themeIcon"></i>
     </button>
-  <a href="#contact" class="nav-btn">Lets Talk</a>
-  <div class="hamburger" onclick="openMobileMenu()">
-    <span></span><span></span><span></span>
+    <a href="#contact" class="nav-btn">Let's Talk</a>
+    <div class="hamburger" onclick="openMobileMenu()">
+      <span></span><span></span><span></span>
+    </div>
   </div>
 </nav>
-
-<!-- ================================================
-     HOME — Hero with photo
-================================================ -->
+ 
+<!-- ════════════════════════════════════════════
+     HOME
+════════════════════════════════════════════ -->
 <section id="home" class="section home-section">
   <div class="section-inner home-grid">
-
+ 
     <!-- LEFT: text -->
     <div class="home-text reveal">
       <div class="hero-tag">
-        <span class="dot"></span>
-        Available for work · Nairobi, Kenya
+        <span class="hero-tag-line">Web Developer & IT Systems Specialist</span>
       </div>
       <h1 class="hero-name">
-        Hi, I'm <span class="hero-name-accent">John</span><br>
+        Hi, I'm <span class="hero-name-accent">John</span>
       </h1>
       <p class="hero-role">
-        Web Developer and IT Systems Specialist based in Nairobi, Kenya.
+        Based in Nairobi, Kenya.
         I build clean websites, fix technical problems and help businesses run smoothly online.
       </p>
       <div class="hero-buttons">
         <a href="#projects" class="btn-solid">See My Work</a>
         <a href="#contact"  class="btn-outline">Contact Me</a>
-        <a href="assets/docs/John-Kamau-CV.pdf" download class="btn-cv">
-          <i class="fas fa-download"></i> Download CV
         </a>
       </div>
-      <!-- Social row -->
       <div class="hero-socials">
         <a href="https://linkedin.com/in/john-mwangi01" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         <a href="https://github.com/kamauwebdev"        target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://instagram.com/mkamauj/"    target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://instagram.com/mkamauj/"        target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://wa.me/254742870207"            target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
-
+ 
     <!-- RIGHT: photo -->
     <div class="home-photo-wrap reveal">
       <div class="home-photo">
-        
-        <!-- Image link -->
         <img
           src="assets/images/john-hero-section.jpeg"
           alt="John Kamau Mwangi"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
         >
-        <!-- Placeholder shown if image is missing -->
         <div class="photo-placeholder">
           <i class="fas fa-user"></i>
-          <span>Image not found<br>Come back later</span>
+          <span>Add photo to<br>assets/images/</span>
         </div>
       </div>
-      <!-- floating cards on the photo -->
+      <!-- Floating cards -->
       <div class="float-card float-top">
         <span class="fc-num">10+</span>
         <span class="fc-label">Projects Done</span>
       </div>
       <div class="float-card float-bottom">
-        <span class="fc-dot"></span>
-        <span class="fc-label">I'm Open to Work</span>
+        <span class="fc-num">Dev</span>
       </div>
     </div>
-
+ 
   </div>
 </section>
-
-<!-- ================================================
+ 
+<!-- ════════════════════════════════════════════
      ABOUT
-================================================ -->
+════════════════════════════════════════════ -->
 <section id="about" class="section about-section">
   <div class="section-inner">
     <span class="section-tag reveal">About</span>
     <h2 class="section-title reveal">My Introduction.</h2>
     <div class="about-text reveal">
       <p>
-       I’m a technology practitioner driven by curiosity, practical problem-solving and 
-       continuous growth. With a technical background grounded in Information Technology 
-       and software development, my experience covers the full spectrum of modern digital 
-       infrastructure from front-end interfaces and backend databases to hands-on 
-       hardware troubleshooting, operating systems and network administration.
+        I'm a technology practitioner driven by curiosity, practical problem-solving and
+        continuous growth. With a technical background grounded in Information Technology
+        and software development, my experience covers the full spectrum of modern digital
+        infrastructure — from front-end interfaces and backend databases to hands-on
+        hardware troubleshooting, operating systems and network administration.
       </p>
+      <p><strong>What I Do</strong></p>
+      <ul class="about-list">
+        <li><i class="fas fa-code"></i> <strong>Software & Web Development</strong> — Crafting responsive, accessible web applications and intuitive interfaces that prioritise real user needs.</li>
+        <li><i class="fas fa-server"></i> <strong>IT & Systems Infrastructure</strong> — Troubleshooting hardware, managing dual-boot OS environments (Windows & Linux), and maintaining network connectivity.</li>
+        <li><i class="fas fa-shield-alt"></i> <strong>Security-First Thinking</strong> — Applying defensive security practices and continuously expanding skills in cybersecurity, systems auditing and digital resilience.</li>
+      </ul>
+      <p><strong>How I Work</strong></p>
       <p>
-        <strong>What I Do:</strong>
-
-Software & Web Development: Crafting responsive, accessible web applications and intuitive interfaces 
-that prioritize real user needs.
-
-IT & Systems Infrastructure: Troubleshooting hardware, managing dual-boot OS environments (Windows & Linux), 
-and maintaining network connectivity.
-
-Security-First Thinking: Applying defensive security practices and continuously expanding my skills in 
-cybersecurity, systems auditing and digital resilience.
-      </p>
-      <p>
-        <strong>How I Work:</strong>
-
-I believe technology is at its best when it serves a genuine purpose. 
-Guided by strong personal integrity, a steady work ethic, and a passion for learning, 
-I bring diligence and detail to every project whether deploying a local system, 
-optimizing code, or diagnosing an IT incident.
-
-When I’m not at the keyboard building or troubleshooting, you can find me diving into tech roadmaps, staying active 
-in community initiatives or following the weekend football fixtures.
+        I believe technology is at its best when it serves a genuine purpose.
+        Guided by strong personal integrity, a steady work ethic, and a passion for learning,
+        I bring diligence and detail to every project — whether deploying a local system,
+        optimising code, or diagnosing an IT incident. When I'm not at the keyboard, you'll
+        find me diving into tech roadmaps, staying active in community initiatives or
+        following the weekend football fixtures.
       </p>
       <div class="about-stats">
-        <div>
-          <span class="stat-num">1+</span>
-          <span class="stat-label">Years experience</span>
-        </div>
-        <div>
-          <span class="stat-num">10+</span>
-          <span class="stat-label">Projects completed</span>
-        </div>
-        <div>
-          <span class="stat-num">3</span>
-          <span class="stat-label">Skill areas</span>
-        </div>
+        <div><span class="stat-num">1+</span><span class="stat-label">Years experience</span></div>
+        <div><span class="stat-num">10+</span><span class="stat-label">Projects completed</span></div>
+        <div><span class="stat-num">100%</span><span class="stat-label">Client satisfaction</span></div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- ================================================
+ 
+<!-- ════════════════════════════════════════════
      SKILLS
-================================================ -->
+════════════════════════════════════════════ -->
 <section id="skills" class="section">
   <div class="section-inner">
     <span class="section-tag reveal">Skills</span>
     <h2 class="section-title reveal">What I know.</h2>
     <p class="section-sub reveal">Across web development, IT systems, and design.</p>
-
+ 
     <div class="skills-list reveal" id="skillBars">
       <div class="skill-row"><span class="skill-name">HTML</span><div class="skill-track"><div class="skill-fill" data-width="90"></div></div><span class="skill-pct">90%</span></div>
       <div class="skill-row"><span class="skill-name">CSS</span><div class="skill-track"><div class="skill-fill" data-width="80"></div></div><span class="skill-pct">80%</span></div>
@@ -215,17 +189,21 @@ in community initiatives or following the weekend football fixtures.
       <div class="skill-row"><span class="skill-name">Adobe Illustrator</span><div class="skill-track"><div class="skill-fill" data-width="60"></div></div><span class="skill-pct">60%</span></div>
       <div class="skill-row"><span class="skill-name">Photoshop</span><div class="skill-track"><div class="skill-fill" data-width="45"></div></div><span class="skill-pct">45%</span></div>
     </div>
-
+ 
     <div class="tools-wrap reveal">
+      <span class="tool-pill">HTML</span>
+      <span class="tool-pill">CSS</span>
+      <span class="tool-pill">JavaScript</span>
+      <span class="tool-pill">TypeScript</span>
+      <span class="tool-pill">React</span>
+      <span class="tool-pill">PHP</span>
+      <span class="tool-pill">Node.js</span>
       <span class="tool-pill">VS Code</span>
       <span class="tool-pill">Git & GitHub</span>
-      <span class="tool-pill">Netlify</span>
       <span class="tool-pill">Figma</span>
       <span class="tool-pill">Adobe Illustrator</span>
       <span class="tool-pill">Photoshop</span>
       <span class="tool-pill">Microsoft 365</span>
-      <span class="tool-pill">TeamViewer</span>
-      <span class="tool-pill">AnyDesk</span>
       <span class="tool-pill">Ubuntu</span>
       <span class="tool-pill">Canva</span>
       <span class="tool-pill">Bootstrap</span>
@@ -233,29 +211,29 @@ in community initiatives or following the weekend football fixtures.
     </div>
   </div>
 </section>
-
-<!-- ================================================
+ 
+<!-- ════════════════════════════════════════════
      PROJECTS
-================================================ -->
+════════════════════════════════════════════ -->
 <section id="projects" class="section projects-section">
   <div class="section-inner">
-    <span class="section-tag reveal">Projects</span>
+    <span class="section-tag reveal">Featured Projects</span>
     <h2 class="section-title reveal">Things I've built.</h2>
-
+ 
     <div class="project-list reveal">
       <div class="project-item">
         <div>
           <div class="project-type">Web Development</div>
           <div class="project-name">Personal Portfolio Website</div>
-          <p class="project-desc">Built this portfolio from scratch — fully responsive, animated skill bars, and a live contact form connected to a Node.js backend.</p>
+          <p class="project-desc">Built this portfolio from scratch — fully responsive, dark/light mode, animated skill bars, and a live contact form.</p>
           <div class="project-tags">
             <span class="project-tag">HTML</span><span class="project-tag">CSS</span>
-            <span class="project-tag">JavaScript</span><span class="project-tag">Netlify</span>
+            <span class="project-tag">JavaScript</span><span class="project-tag">Vercel</span>
           </div>
         </div>
         <div class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
       </div>
-
+ 
       <div class="project-item">
         <div>
           <div class="project-type">Freelance</div>
@@ -268,7 +246,7 @@ in community initiatives or following the weekend football fixtures.
         </div>
         <div class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
       </div>
-
+ 
       <div class="project-item">
         <div>
           <div class="project-type">IT Support</div>
@@ -281,7 +259,7 @@ in community initiatives or following the weekend football fixtures.
         </div>
         <div class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
       </div>
-
+ 
       <div class="project-item">
         <div>
           <div class="project-type">Design</div>
@@ -297,87 +275,119 @@ in community initiatives or following the weekend football fixtures.
     </div>
   </div>
 </section>
-
-<!-- ================================================
-     JOURNEY
-================================================ -->
+ 
+<!-- ════════════════════════════════════════════
+     JOURNEY — Tab-based Education & Work
+════════════════════════════════════════════ -->
 <section id="journey" class="section">
   <div class="section-inner">
     <span class="section-tag reveal">Journey</span>
-    <h2 class="section-title reveal">Education & experience.</h2>
-
-    <div class="journey-grid reveal">
-      <div>
-        <div class="journey-col-title">Education</div>
-        <div class="timeline-entries">
-            <div class="timeline-entry">
-            <div class="entry-period">2026 – Present</div>
-            <div class="entry-title">Bsc. in Information Security and Forensics</div>
-            <div class="entry-place">KCA University · Nairobi</div>
-          </div>
-          <div class="timeline-entry">
-            <div class="entry-period">2024 – 2026</div>
-            <div class="entry-title">Diploma in Information Technology</div>
-            <div class="entry-place">KCA University · Nairobi</div>
-          </div>
-          <div class="timeline-entry">
-            <div class="entry-period">Jan – Apr 2026</div>
-            <div class="entry-title">Certificate in Graphic Design</div>
-            <div class="entry-place">Membley Technical College</div>
-          </div>
-          <div class="timeline-entry">
-            <div class="entry-period">Jan – Aug 2024</div>
-            <div class="entry-title">Web Development & Design</div>
-            <div class="entry-place">IAT Institution</div>
-          </div>
-          <div class="timeline-entry">
-            <div class="entry-period">Jan – Jun 2023</div>
-            <div class="entry-title">ICDL Certification</div>
-            <div class="entry-place">RCMRD</div>
-          </div>
+    <h2 class="section-title reveal">Education & Work</h2>
+ 
+    <!-- Tabs -->
+    <div class="tl-tabs reveal">
+      <button class="tl-tab active" data-pane="edu">Education</button>
+      <button class="tl-tab" data-pane="work">Work</button>
+    </div>
+ 
+    <!-- Education pane -->
+    <div class="tl-pane active" id="pane-edu">
+      <div class="timeline-entries">
+        <div class="timeline-entry">
+          <div class="entry-period">2026 – Present <span class="current-badge">Current</span></div>
+          <div class="entry-title">BSc. Information Security & Forensics</div>
+          <div class="entry-place">KCA University · Nairobi</div>
+          <div class="entry-desc">Specialising in cybersecurity, digital forensics, and information assurance.</div>
         </div>
-      </div>
-      <div>
-        <div class="journey-col-title">Work</div>
-        <div class="timeline-entries">
-          <div class="timeline-entry">
-            <div class="entry-period">Jan 2025 – Present <span class="current-badge">Current</span></div>
-            <div class="entry-title">Freelance Web Developer & Designer</div>
-            <div class="entry-place">Self-employed · Nairobi</div>
-          </div>
-          <div class="timeline-entry">
-            <div class="entry-period">Apr – Aug 2026 <span class="current-badge">5 Months</span></div>
-            <div class="entry-title">IT Support Specialist</div>
-            <div class="entry-place">USIU-Africa · Nairobi</div>
-          </div>
+        <div class="timeline-entry">
+          <div class="entry-period">2024 – 2026</div>
+          <div class="entry-title">Diploma in Information Technology</div>
+          <div class="entry-place">KCA University · Nairobi</div>
+          <div class="entry-desc">Core IT subjects — programming, networking, databases, operating systems, and IT support.</div>
+        </div>
+        <div class="timeline-entry">
+          <div class="entry-period">Jan – Apr 2026</div>
+          <div class="entry-title">Certificate in Graphic Design</div>
+          <div class="entry-place">Membley Technical College</div>
+          <div class="entry-desc">Graphic design fundamentals — Adobe Illustrator, Photoshop, and Canva.</div>
+        </div>
+        <div class="timeline-entry">
+          <div class="entry-period">Jan – Aug 2024</div>
+          <div class="entry-title">Web Development & Design</div>
+          <div class="entry-place">IAT Institution</div>
+          <div class="entry-desc">Front-end web development and design — HTML, CSS, JavaScript, Bootstrap, Figma, and Adobe Illustrator.</div>
+        </div>
+        <div class="timeline-entry">
+          <div class="entry-period">Jan – Jun 2023</div>
+          <div class="entry-title">ICDL Certification</div>
+          <div class="entry-place">RCMRD</div>
+          <div class="entry-desc">International Computer Driving License (ICDL) — covering computer essentials, online essentials, word processing, spreadsheets, and presentations.</div>
         </div>
       </div>
     </div>
+ 
+    <!-- Work pane -->
+    <div class="tl-pane" id="pane-work">
+      <div class="timeline-entries">
+        <div class="timeline-entry">
+          <div class="entry-period">Jan 2025 – Present <span class="current-badge">Current</span></div>
+          <div class="entry-title">Web Developer & Designer</div>
+          <div class="entry-place">Freelance · Nairobi</div>
+          <div class="entry-desc">Building websites and digital assets for small businesses across Nairobi — from design in Figma through to live deployment. Also delivering graphic design work including logos, brand kits, and print materials.</div>
+        </div>
+        <div class="timeline-entry">
+          <div class="entry-period">Apr – Aug 2026 <span class="current-badge">5 Months</span></div>
+          <div class="entry-title">IT Support Specialist</div>
+          <div class="entry-place">USIU-Africa · Nairobi</div>
+          <div class="entry-desc">Provided technical support and maintenance for IT systems and infrastructure. Assisted staff and students with hardware and software issues, ensuring smooth operation of the IT environment.</div>
+        </div>
+      </div>
+    </div>
+ 
   </div>
 </section>
-
-<!-- ================================================
+ 
+<!-- ════════════════════════════════════════════
      CONTACT
-================================================ -->
+════════════════════════════════════════════ -->
 <section id="contact" class="section contact-section">
   <div class="section-inner">
     <span class="section-tag reveal">Contact</span>
     <h2 class="section-title reveal">Get In Touch.</h2>
-
-    <!-- Success / Error message banner -->
+ 
+    <!-- Status banner -->
     <div id="formBanner" class="form-banner hidden"></div>
-
+ 
     <div class="contact-layout">
+      <!-- Left: info -->
       <div class="reveal">
-        <p class="contact-intro">Open to freelance development, IT infrastructure roles and collaborative projects. Reach out and I’ll get back to you within 24 hours.</p>
+        <p class="contact-intro">
+          Whether it's a website, an IT problem, a design job or just a conversation —
+          reach out and I'll get back to you within 24 hours.
+        </p>
         <div class="channel-list">
-          <a href="tel:+254742870207" class="channel-row"><i class="fas fa-phone"></i> +254 742 870 207</a>
-          <a href="mailto:johnkmwangi29@gmail.com" class="channel-row"><i class="fas fa-envelope"></i> johnkmwangi29@gmail.com</a>
-          <a href="https://www.google.com/maps/place/Nairobi+County/@-1.302473,36.7450991,11z/data=!3m1!4b1!4m5!3m4!1s0x182f11655c311541:0x9dd769ac1c10b897!8m2!3d-1.3106691!4d36.8250274" class="channel-row"><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</a>
+          <a href="tel:+254742870207" class="channel-row">
+            <i class="fas fa-phone"></i> +254 742 870 207
+          </a>
+          <a href="mailto:johnkmwangi29@gmail.com" class="channel-row">
+            <i class="fas fa-envelope"></i> johnkmwangi29@gmail.com
+          </a>
+          <a href="https://www.google.com/maps/place/Nairobi+County/@-1.302473,36.7450991,11z"
+             target="_blank" class="channel-row">
+            <i class="fas fa-map-marker-alt"></i> Nairobi, Kenya
+          </a>
+          <a href="https://linkedin.com/in/john-mwangi01" target="_blank" class="channel-row">
+            <i class="fab fa-linkedin-in"></i> linkedin.com/in/john-mwangi01
+          </a>
+          <a href="https://wa.me/254742870207" target="_blank" class="channel-row">
+            <i class="fab fa-whatsapp"></i> WhatsApp me
+          </a>
         </div>
       </div>
-      
+ 
+      <!-- Right: form -->
       <form class="contact-form reveal" id="contactForm" novalidate>
+        <p class="form-heading">Send me a message</p>
         <div class="form-row">
           <div class="form-group">
             <label class="form-label" for="fname">Name *</label>
@@ -391,17 +401,19 @@ in community initiatives or following the weekend football fixtures.
           </div>
         </div>
         <div class="form-group">
-          <label class="form-label" for="fphone">Phone <span style="font-weight:300;color:#aaa">(optional)</span></label>
+          <label class="form-label" for="fphone">Phone <span class="optional-label">(optional)</span></label>
           <input class="form-input" type="tel" id="fphone" name="phone" placeholder="+254...">
         </div>
         <div class="form-group">
           <label class="form-label" for="fsubject">Subject *</label>
-          <input class="form-input" type="text" id="fsubject" name="subject" placeholder="Freelance project, IT help, collaboration..." required>
+          <input class="form-input" type="text" id="fsubject" name="subject"
+            placeholder="Freelance project, IT help, collaboration..." required>
           <span class="field-error" id="subjectError">Please enter a subject</span>
         </div>
         <div class="form-group">
           <label class="form-label" for="fmsg">Message *</label>
-          <textarea class="form-textarea" id="fmsg" name="message" placeholder="Tell me what you need..." required></textarea>
+          <textarea class="form-textarea" id="fmsg" name="message"
+            placeholder="Tell me what you need..." required></textarea>
           <span class="field-error" id="msgError">Please enter a message</span>
         </div>
         <button class="form-submit" type="submit" id="submitBtn">
@@ -411,25 +423,88 @@ in community initiatives or following the weekend football fixtures.
     </div>
   </div>
 </section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-left">© <span id="currentYear"></span> John Kamau Mwangi · All rights reserved.</div>
-  <div class="footer-socials">
-    <a href="https://linkedin.com/in/john-mwangi01" target="_blank" class="channel-row"><i class="fab fa-linkedin-in"></i></a>
-    <a href="https://github.com/kamauwebdev"        target="_blank" class="channel-row"><i class="fab fa-github"></i></a>
-    <a href="https://instagram.com/mkamauj/"    target="_blank" class="channel-row"><i class="fab fa-instagram"></i></a>
-    <a href="https://twitter.com/jonsowavy1"      target="_blank" class="channel-row"><i class="fab fa-twitter"></i></a>
+ 
+<!-- ════════════════════════════════════════════
+     FOOTER — 3-column layout (single footer only)
+════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+ 
+    <!-- Col 1: Brand -->
+    <div class="footer-brand">
+      <div class="footer-logo">John <span>Mwangi</span></div>
+      <p class="footer-bio">
+        Web Developer & IT Systems Specialist.
+      </p>
+      <p class="footer-bio">
+        Building modern digital experiences, reliable IT solutions,
+        and practical technology that helps people and businesses work better.
+      </p>
+      <div class="footer-socials">
+        <a href="https://linkedin.com/in/john-mwangi01" target="_blank" class="footer-social" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/kamauwebdev" target="_blank" class="footer-social" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://instagram.com/mkamauj/" target="_blank" class="footer-social" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com/jonsowavy1" target="_blank" class="footer-social" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+ 
+    <!-- Col 2: Quick Links -->
+    <div class="footer-links-col">
+      <h4 class="footer-col-title">Quick Links</h4>
+      <ul class="footer-nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#journey">Journey</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+ 
+    <!-- Col 3: Contact -->
+    <div class="footer-contact-col">
+      <h4 class="footer-col-title">Contact</h4>
+      <ul class="footer-contact-list">
+        <li>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:johnkmwangi29@gmail.com">johnkmwangi29@gmail.com</a>
+        </li>
+        <li>
+          <i class="fas fa-phone"></i>
+          <a href="tel:+254742870207">+254 742 870 207</a>
+        </li>
+        <li>
+          <i class="fas fa-map-marker-alt"></i>
+          <a href="https://www.google.com/maps/place/Nairobi+County/@-1.302473,36.7450991,11z"
+             target="_blank">Nairobi, Kenya</a>
+        </li>
+      </ul>
+    </div>
+ 
+  </div>
+ 
+  <!-- Footer bottom bar -->
+  <div class="footer-bottom">
+    <p>© <span id="currentYear"></span> John Kamau Mwangi. All rights reserved.</p>
+    <p>Designed & developed by John Mwangi · Nairobi 🇰🇪</p>
   </div>
 </footer>
-
+ 
 <!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/254742870207?text=Hi%20John,%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect!"
+<a href="https://wa.me/254742870207?text=Hi%20John,%20I%20found%20your%20portfolio!"
    target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
   <i class="fab fa-whatsapp"></i>
 </a>
-
-<!-- JavaScript -->
+ 
 <script src="js/main.js"></script>
 </body>
 </html>
+ 
