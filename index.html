@@ -48,7 +48,7 @@
  
 <!-- ─── NAVIGATION ────────────────────────────── -->
 <nav id="navbar">
-  <a href="#home" class="nav-logo"><i class="fas fa-code"></i> John <span>K.</span></a>
+  <a href="#home" class="nav-logo"><i class="fas fa-code"></i> <span>John </span></a>
   <ul class="nav-links">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
@@ -373,40 +373,57 @@
   <div class="section-inner">
     <span class="section-tag reveal">Contact</span>
     <h2 class="section-title reveal">Get In Touch.</h2>
- 
+
     <!-- Status banner -->
     <div id="formBanner" class="form-banner hidden"></div>
- 
+
     <div class="contact-layout">
-      <!-- Left: info -->
-      <div class="reveal">
+      <!-- Left Column: Info & Availability (50%) -->
+      <div class="contact-col info-col reveal">
         <p class="contact-intro">
           Whether it's a website, an IT problem, a design job or just a conversation —
-          reach out and I'll get back to you within 24 hours.
+          reach out using the contact information or form below and I'll get 
+          back to you within 24 hours.
         </p>
-        <div class="channel-list">
-          <a href="tel:+254742870207" class="channel-row">
-            <i class="fas fa-phone"></i> +254 742 870 207
-          </a>
-          <a href="mailto:johnkmwangi29@gmail.com" class="channel-row">
-            <i class="fas fa-envelope"></i> johnkmwangi29@gmail.com
-          </a>
-          <a href="https://www.google.com/maps/place/Nairobi+County/@-1.302473,36.7450991,11z"
-             target="_blank" class="channel-row">
-            <i class="fas fa-map-marker-alt"></i> Nairobi, Kenya
-          </a>
-          <a href="https://linkedin.com/in/john-mwangi01" target="_blank" class="channel-row">
-            <i class="fab fa-linkedin-in"></i> LinkedIn
-          </a>
-          <a href="https://wa.me/254742870207" target="_blank" class="channel-row">
-            <i class="fab fa-whatsapp"></i> WhatsApp me
-          </a>
+
+        <div class="availability-container">
+          <div class="availability-header">  
+            <span class="availability-title">Available For:</span>
+          </div>
+
+          <div class="pill-grid">
+            <div class="service-chip">
+              <span class="chip-dot"></span>
+              <span class="chip-text">Web Design</span>
+            </div>
+            <div class="service-chip">
+              <span class="chip-dot"></span>
+              <span class="chip-text">IT & Systems Support</span>
+            </div>
+            <div class="service-chip">
+              <span class="chip-dot"></span>
+              <span class="chip-text">Graphic Design</span>
+            </div>
+            <div class="service-chip">
+              <span class="chip-dot"></span>
+              <span class="chip-text">Collaborations</span>
+            </div>
+            <div class="service-chip">
+              <span class="chip-dot"></span>
+              <span class="chip-text">Backend Development Projects</span>
+            </div>
+            <div class="service-chip">
+              <span class="chip-dot"></span>
+              <span class="chip-text">Open Source Collaborations</span>
+            </div>
+          </div>
         </div>
       </div>
- 
-      <!-- Right: form -->
-      <form class="contact-form reveal" id="contactForm" novalidate>
+
+      <!-- Right Column: Form (50%) -->
+      <form class="contact-col contact-form reveal" id="contactForm" novalidate>
         <p class="form-heading">Send me a message</p>
+        
         <div class="form-row">
           <div class="form-group">
             <label class="form-label" for="fname">Name *</label>
@@ -419,22 +436,26 @@
             <span class="field-error" id="emailError">Please enter a valid email</span>
           </div>
         </div>
+
         <div class="form-group">
           <label class="form-label" for="fphone">Phone <span class="optional-label">(optional)</span></label>
           <input class="form-input" type="tel" id="fphone" name="phone" placeholder="+254...">
         </div>
+
         <div class="form-group">
           <label class="form-label" for="fsubject">Subject *</label>
           <input class="form-input" type="text" id="fsubject" name="subject"
             placeholder="Freelance project, IT help, collaboration..." required>
           <span class="field-error" id="subjectError">Please enter a subject</span>
         </div>
+
         <div class="form-group">
           <label class="form-label" for="fmsg">Message *</label>
           <textarea class="form-textarea" id="fmsg" name="message"
             placeholder="Tell me what you need..." required></textarea>
           <span class="field-error" id="msgError">Please enter a message</span>
         </div>
+
         <button class="form-submit" type="submit" id="submitBtn">
           Send Message <i class="fas fa-paper-plane"></i>
         </button>
